@@ -45,10 +45,6 @@ class Erase:
     LINE = "\033[2K"
 
 class Cursor:
-    ''' ESC = "\u001B["
-    OSC = "\u001B]"
-    BEL = "\u0007"
-    SEP = ";" '''
     HOME = "\033[H"
     UP = "\033[1A"
     DOWN = "\033[1B"
@@ -72,6 +68,18 @@ class Cursor:
         return f"\033[{columns}F"
     def column(column):
         return f"\033[{column}G"
+
+class Special:
+    NEWLINE = "\n"
+    SINGLEQUITE = "\'"
+    DOUBLEQUOTE = "\\'"
+    BACKSLASH = "\\"
+    CARRIAGERETURN = "\r"
+    TAB = "\t"
+    BACKSPACE = "\b"
+    FORMFEED = "\f"
+    VERTICALTAB = "\v"
+    NULLCHARACTER = "\0"
 
 class Style:
     RESET_ALL = "\033[0m"
@@ -110,7 +118,7 @@ class Fore:
     HOT_PINK = "\033[38;2;255;105;180m"
     GOLD = "\033[38;2;255;215;0m"
     RESET = "\033[39m"
-    def color(rr, gg, bb):
+    def color(rr, gg=None, bb=None):
         converter = Converter(rr, gg, bb)
         color = converter.to_color()
         r = color.r
@@ -147,7 +155,7 @@ class Back:
     HOT_PINK = "\033[48;2;255;105;180m"
     GOLD = "\033[48;2;255;215;0m"
     RESET = "\033[49m"
-    def color(rr, gg, bb):
+    def color(rr, gg=None, bb=None):
         converter = Converter(rr, gg, bb)
         color = converter.to_color()
         r = color.r
@@ -218,3 +226,4 @@ def steps(start_color, end_color, length, style="rgb"):
             steps.append(Color(r, g, b))
 
     return steps
+
