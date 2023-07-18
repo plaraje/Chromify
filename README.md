@@ -185,7 +185,7 @@ print(myString)
 
 `"color"`: Returns the array with Color objects that are compatible with Color class (Default if an invalid value is given). 
 
-# License
+# [License](LICENSE)
 
 MIT License
 

@@ -1,0 +1,16 @@
+# Archivos y carpetas generados por Python y pip
+__pycache__/
+*.pyc
+*.pyo/
+*.pyd/
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+
+# Carpeta virtualenv
+venv/
+
+# Carpetas específicas a excluir
+docs/
