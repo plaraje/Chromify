@@ -208,3 +208,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 For any sales or inquiry-related questions, please contact Plaraje at mat.demoya@gmail.com.
 
 # Agradecimientos especiales
+Gracias a Sk1x por la ayuda con la licencia y las docs
