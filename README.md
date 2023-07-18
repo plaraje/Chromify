@@ -4,7 +4,7 @@ Chromify is a Python library that provides functionalities for color manipulatio
 
 ![BANNER](BANNER.PNG)
 
-![GitHub all releases](https://img.shields.io/github/downloads/plaraje/chromify/total?style=plastic&logo=GitHub&label=Downloads&color=%2300FF00)   ![Static Badge](https://img.shields.io/badge/License-MIT-green?style=plastic&logo=MIT&label=License&color=%2300FF00)   ![GitHub release (with filter)](https://img.shields.io/github/v/release/plaraje/chromify?style=plastic&logo=GitHub&label=Relase&color=%23ff0000)   ![GitHub Repo stars](https://img.shields.io/github/stars/plaraje/chromify?style=plastic&logo=GitHub&label=Stars&color=%23ffff00)
+![GitHub all releases](https://img.shields.io/github/downloads/plaraje/Chromify/total?style=plastic&logo=GitHub&label=Downloads&color=%2300FF00)   ![Static Badge](https://img.shields.io/badge/License-MIT-green?style=plastic&logo=MIT&label=License&color=%2300FF00)   ![GitHub release (with filter)](https://img.shields.io/github/v/release/plaraje/Chromify?style=plastic&logo=GitHub&label=Relase&color=%23ff0000)   ![GitHub Repo stars](https://img.shields.io/github/stars/plaraje/Chromify?style=plastic&logo=GitHub&label=Stars&color=%23ffff00)
 
 
 

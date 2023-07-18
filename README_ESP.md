@@ -5,7 +5,7 @@ Chromify es una biblioteca de Python que proporciona funcionalidades para la man
 
 ![BANNER](BANNER.PNG)
 
-![Descargas totales en GitHub](https://img.shields.io/github/downloads/plaraje/chromify/total?style=plastic&logo=GitHub&label=Descargas&color=%2300FF00)   ![Insignia estática](https://img.shields.io/badge/Licencia-MIT-green?style=plastic&logo=MIT&label=Licencia&color=%2300FF00)   ![Versión de lanzamiento en GitHub (con filtro)](https://img.shields.io/github/v/release/plaraje/chromify?style=plastic&logo=GitHub&label=Lanzamiento&color=%23ff0000)   ![Estrellas del repositorio en GitHub](https://img.shields.io/github/stars/plaraje/chromify?style=plastic&logo=GitHub&label=Estrellas&color=%23ffff00)
+![Descargas totales en GitHub](https://img.shields.io/github/downloads/plaraje/Chromify/total?style=plastic&logo=GitHub&label=Descargas&color=%2300FF00)   ![Insignia estática](https://img.shields.io/badge/Licencia-MIT-green?style=plastic&logo=MIT&label=Licencia&color=%2300FF00)   ![Versión de lanzamiento en GitHub (con filtro)](https://img.shields.io/github/v/release/plaraje/Chromify?style=plastic&logo=GitHub&label=Lanzamiento&color=%23ff0000)   ![Estrellas del repositorio en GitHub](https://img.shields.io/github/stars/plaraje/Chromify?style=plastic&logo=GitHub&label=Estrellas&color=%23ffff00)
 
 
 
