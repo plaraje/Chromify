@@ -2,7 +2,7 @@
 
 Chromify is a Python library that provides functionalities for color manipulation and conversion. It allows you to convert between different color representations such as RGB, HEX, HSL, CMYK, and HSV, and perform various color operations.
 
-![BANNER](https://github.com/plaraje/chromify/assets/61209614/e4906631-4315-4923-83de-df161fcc1bae)
+![BANNER](BANNER.PNG)
 
 ![GitHub all releases](https://img.shields.io/github/downloads/plaraje/chromify/total?style=plastic&logo=GitHub&label=Downloads&color=%2300FF00)   ![Static Badge](https://img.shields.io/badge/License-MIT-green?style=plastic&logo=MIT&label=License&color=%2300FF00)   ![GitHub release (with filter)](https://img.shields.io/github/v/release/plaraje/chromify?style=plastic&logo=GitHub&label=Relase&color=%23ff0000)   ![GitHub Repo stars](https://img.shields.io/github/stars/plaraje/chromify?style=plastic&logo=GitHub&label=Stars&color=%23ffff00)
 
