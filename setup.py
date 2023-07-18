@@ -5,7 +5,7 @@ with open('./README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='Chromify',
-    version='1.1.6',
+    version='1.1.7',
     author='Plaraje',
     author_email='mat.demoya@gmail.com',
     description='Colorful Terminal Prints',
