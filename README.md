@@ -193,7 +193,7 @@ Copyright (c) 2023 Plaraje
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use the Software for personal and non-commercial projects without restriction, subject to the following conditions:
 
-1. Commercial projects using this Software must acquire a lifetime license for an amount of X$. Please contact Plaraje at mat.demoya@gmail.com for more information on commercial licenses.
+1. Commercial projects using this Software must acquire a lifetime license for an amount of 7.99$. Please contact Plaraje at mat.demoya@gmail.com for more information on commercial licenses.
 
 2. Direct copying or cloning of the source code of this Software, whether in its original form or modified, is not permitted.
 
