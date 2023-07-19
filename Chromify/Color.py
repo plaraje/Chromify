@@ -26,6 +26,8 @@ class Color:
         self.BACK = f'\033[48;2;{r};{g};{b}m'
         self.RGBTOUPLE = (self.r, self.g, self.b)
 
+        self._SetDefaultValues()
+
         # Validación de valores RGB
         if not all(isinstance(c, int) and 0 <= c <= 255 for c in (self.r, self.g, self.b)):
             raise ValueError("RGB values must be in the range of 0 to 255")
@@ -75,11 +77,7 @@ class Color:
             self.r = int(max(0, min(r * 255, 255)))
             self.g = int(max(0, min(g * 255, 255)))
             self.b = int(max(0, min(b * 255, 255)))
-
-            self.FORE = f'\033[38;2;{int(max(0, min(r * 255, 255)))};{int(max(0, min(g * 255, 255)))};{hue_to_rgb(p, q, h - 1 / 3)}m'
-            self.BACK = f'\033[48;2;{int(max(0, min(r * 255, 255)))};{int(max(0, min(g * 255, 255)))};{hue_to_rgb(p, q, h - 1 / 3)}m'
-            self.RGBTOUPLE = (int(max(0, min(r * 255, 255))), int(max(0, min(g * 255, 255))), hue_to_rgb(p, q, h - 1 / 3))
-    
+            
     def _from_cmyk(self, cmyk_value):
         cmyk_value = cmyk_value.lstrip("cmyk(").rstrip("%)")
         c, m, y, k = [part.strip() for part in cmyk_value.split(",")]
@@ -141,6 +139,11 @@ class Color:
         self.r = color.r
         self.g = color.g
         self.b = color.b
+    
+    def _SetDefaultValues(self):
+        self.FORE = f'\033[38;2;{r};{g};{b}m'
+        self.BACK = f'\033[48;2;{r};{g};{b}m'
+        self.RGBTOUPLE = (self.r, self.g, self.b)
 
     def __repr__(self):
         return f"Color({self.r}, {self.g}, {self.b})"
