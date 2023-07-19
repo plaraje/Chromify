@@ -21,10 +21,6 @@ class Color:
             self.r = max(0, min(r or 0, 255))
             self.g = max(0, min(g or 0, 255))
             self.b = max(0, min(b or 0, 255))
-        
-        self.FORE = f'\033[38;2;{r};{g};{b}m'
-        self.BACK = f'\033[48;2;{r};{g};{b}m'
-        self.RGBTOUPLE = (self.r, self.g, self.b)
 
         self._SetDefaultValues()
 
@@ -77,7 +73,7 @@ class Color:
             self.r = int(max(0, min(r * 255, 255)))
             self.g = int(max(0, min(g * 255, 255)))
             self.b = int(max(0, min(b * 255, 255)))
-            
+
     def _from_cmyk(self, cmyk_value):
         cmyk_value = cmyk_value.lstrip("cmyk(").rstrip("%)")
         c, m, y, k = [part.strip() for part in cmyk_value.split(",")]
@@ -141,8 +137,8 @@ class Color:
         self.b = color.b
     
     def _SetDefaultValues(self):
-        self.FORE = f'\033[38;2;{r};{g};{b}m'
-        self.BACK = f'\033[48;2;{r};{g};{b}m'
+        self.FORE = f'\033[38;2;{self.r};{self.g};{self.b}m'
+        self.BACK = f'\033[48;2;{self.r};{self.g};{self.b}m'
         self.RGBTOUPLE = (self.r, self.g, self.b)
 
     def __repr__(self):

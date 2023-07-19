@@ -5,4 +5,4 @@ from .Converter import *
 NAME = "Chromify"
 AUTHOR = "Plaraje"
 LICENSE = "MIT"
-VERSION = "1.1.20"
+VERSION = "1.1.21"
