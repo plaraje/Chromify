@@ -1,4 +1,5 @@
 import os
+import random
 from .Color import Color
 from .Converter import Converter
 
@@ -227,3 +228,5 @@ def steps(start_color, end_color, length, style="rgb"):
 
     return steps
 
+def random_color():
+    return Color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
