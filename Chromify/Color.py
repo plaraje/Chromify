@@ -75,6 +75,10 @@ class Color:
             self.r = int(max(0, min(r * 255, 255)))
             self.g = int(max(0, min(g * 255, 255)))
             self.b = int(max(0, min(b * 255, 255)))
+
+            self.FORE = f'\033[38;2;{int(max(0, min(r * 255, 255)))};{int(max(0, min(g * 255, 255)))};{hue_to_rgb(p, q, h - 1 / 3)}m'
+            self.BACK = f'\033[48;2;{int(max(0, min(r * 255, 255)))};{int(max(0, min(g * 255, 255)))};{hue_to_rgb(p, q, h - 1 / 3)}m'
+            self.RGBTOUPLE = (int(max(0, min(r * 255, 255))), int(max(0, min(g * 255, 255))), hue_to_rgb(p, q, h - 1 / 3))
     
     def _from_cmyk(self, cmyk_value):
         cmyk_value = cmyk_value.lstrip("cmyk(").rstrip("%)")
@@ -426,15 +430,15 @@ class Color:
     def brightness(self):
         return (self.r + self.g + self.b) // 3
 
-    def generate_palette(self, num_colors=4):
+    def generate_palette(self, num_colors=4, sstep=100):
         palette = [self]  # Agrega el color base a la paleta
-        step = 100 / (num_colors - 1)  # Calcula el paso de variación de la saturación
+        step = sstep / (num_colors - 1)  # Calcula el paso de variación de la saturación
         hsl_color = self.to_hsl()  # Convierte el color base a HSL
         hsl_value = self.to_hsl().lstrip("hsl(").rstrip(")").split(",")
-        h, x, l = [part.strip("%") for part in hsl_value]
+        h, s, l = [part.strip("%") for part in hsl_value]
         for i in range(1, num_colors):
             s = round(i * step)  # Calcula el valor de saturación para el color actual
-            new_color = Color(f"hsl({h}, {s}%, {l}%)")  # Crea un nuevo objeto Color con la saturación modificada
+            new_color = Color(Color(f"hsl({h}, {s}%, {l}%)").to_hex())  # Crea un nuevo objeto Color con la saturación modificada
             palette.append(new_color)
         return palette
 
@@ -459,8 +463,8 @@ class Color:
         hsl_value = self.to_hsl().lstrip("hsl(").rstrip(")").split(",")
         h, s, l = [part.strip("%") for part in hsl_value]
         h = (float(h) + 180) % 360
-        hsl_color = f"hsl({h}, {s}%, {l}%)"
-        return Color(hsl_color)
+        col = Color(f"hsl({h}, {s}%, {l}%)").to_hex()
+        return Color(col)
 
     def contrast(self):
         brightness = self.brightness()
